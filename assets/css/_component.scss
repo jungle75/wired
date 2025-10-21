@@ -163,7 +163,7 @@ h5 {
 }
 
 .inpBox:focus-within {
-  border-color: var(--blue50);
+  border-color: var(--navy30);
 }
 
 .inpBox input:invalid {
@@ -266,12 +266,13 @@ h5 {
 }
 
 .selectBox:focus-within {
-  border-color: var(--blue50);
+    border-color: var(--navy30);
 }
 
 .selectBox:focus-within::after {
   transform: translateY(-50%) rotate(180deg);
 }
+
 
 /*disabled 처리*/
 .selectBox:has(:disabled) {
@@ -355,8 +356,8 @@ h5 {
 }
 
 .radioTy1 input:checked+label::before {
-  border-color: var(--blue50);
-  background-color: var(--blue50);
+  border-color: var(--navy30);
+  background-color: var(--navy30);
   box-sizing: border-box;
 }
 
@@ -439,9 +440,9 @@ h5 {
 }
 
 .checkbox input:checked+label::before {
-  border-color: var(--blue50);
-  background-color: var(--blue50);
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4C0 1.79086 1.79086 0 4 0H12C14.2091 0 16 1.79086 16 4V12C16 14.2091 14.2091 16 12 16H4C1.79086 16 0 14.2091 0 12V4Z' fill='%233D7ADC'/%3E%3Cpath d='M4 8L6.0414 10.1872C6.44674 10.6215 7.13908 10.6088 7.52815 10.1598L12 5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  border-color: var(--navy30);
+  background-color: var(--navy30);
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4C0 1.79086 1.79086 0 4 0H12C14.2091 0 16 1.79086 16 4V12C16 14.2091 14.2091 16 12 16H4C1.79086 16 0 14.2091 0 12V4Z' fill='%2300337B'/%3E%3Cpath d='M4 8L6.0414 10.1872C6.44674 10.6215 7.13908 10.6088 7.52815 10.1598L12 5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
   background-position: -1px -1px;
 }
 
@@ -582,7 +583,7 @@ h5 {
 }
 
 .btn.blue {
-  background-color: var(--blue50);
+  background-color: var(--navy30);
   color: var(--white);
 }
 
@@ -952,6 +953,7 @@ h5 {
 /* calendar */
 .ui-datepicker {
   width: 200px;
+  background-color: white;
 }
 
 .ui-datepicker.ui-widget.ui-widget-content {
@@ -1048,7 +1050,7 @@ a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
   color: var(--white);
-  background-color: var(--blue50);
+  background-color: var(--navy30);
 }
 
 .ui-state-highlight,

@@ -12,6 +12,7 @@
   --yellow30: #FFB300;
   --red30: #F2473D;
   --pink30: #F81AE9;
+  --navy30: #00337B;
   --gray99: #F7F7F8;
   --gray90: #F7FBFB;
   --gray80: #F2F6F6;
@@ -225,6 +226,38 @@ legend {
   overflow: hidden;
 }
 
+input, textarea {
+  opacity: 1;
+  -webkit-text-fill-color: inherit;
+}
+
+input, textarea, select {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray5);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: normal;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+textarea, select {
+  outline: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:disabled {
+  pointer-events: none;
+}
+
 .hidden {
   display: none;
 }
@@ -404,7 +437,7 @@ h5 {
 }
 
 .inpBox:focus-within {
-  border-color: var(--blue50);
+  border-color: var(--navy30);
 }
 
 .inpBox input:invalid {
@@ -507,7 +540,7 @@ h5 {
 }
 
 .selectBox:focus-within {
-  border-color: var(--blue50);
+  border-color: var(--navy30);
 }
 
 .selectBox:focus-within::after {
@@ -596,8 +629,8 @@ h5 {
 }
 
 .radioTy1 input:checked + label::before {
-  border-color: var(--blue50);
-  background-color: var(--blue50);
+  border-color: var(--navy30);
+  background-color: var(--navy30);
   box-sizing: border-box;
 }
 
@@ -680,9 +713,9 @@ h5 {
 }
 
 .checkbox input:checked + label::before {
-  border-color: var(--blue50);
-  background-color: var(--blue50);
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4C0 1.79086 1.79086 0 4 0H12C14.2091 0 16 1.79086 16 4V12C16 14.2091 14.2091 16 12 16H4C1.79086 16 0 14.2091 0 12V4Z' fill='%233D7ADC'/%3E%3Cpath d='M4 8L6.0414 10.1872C6.44674 10.6215 7.13908 10.6088 7.52815 10.1598L12 5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  border-color: var(--navy30);
+  background-color: var(--navy30);
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4C0 1.79086 1.79086 0 4 0H12C14.2091 0 16 1.79086 16 4V12C16 14.2091 14.2091 16 12 16H4C1.79086 16 0 14.2091 0 12V4Z' fill='%2300337B'/%3E%3Cpath d='M4 8L6.0414 10.1872C6.44674 10.6215 7.13908 10.6088 7.52815 10.1598L12 5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
   background-position: -1px -1px;
 }
 
@@ -823,7 +856,7 @@ h5 {
 }
 
 .btn.blue {
-  background-color: var(--blue50);
+  background-color: var(--navy30);
   color: var(--white);
 }
 
@@ -1192,6 +1225,7 @@ h5 {
 /* calendar */
 .ui-datepicker {
   width: 200px;
+  background-color: white;
 }
 
 .ui-datepicker.ui-widget.ui-widget-content {
@@ -1288,7 +1322,7 @@ a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
   color: var(--white);
-  background-color: var(--blue50);
+  background-color: var(--navy30);
 }
 
 .ui-state-highlight,
@@ -1872,5 +1906,58 @@ a.ui-button:active,
   font-size: 24px;
   font-weight: 700;
   color: var(--black);
+  margin-bottom: 16px;
+}
+
+.formArea {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 40px;
+}
+.formArea .formItem {
+  width: calc(33.333% - 27px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.formArea .formItem .label {
+  width: 56px;
+  min-width: 56px;
+  display: flex;
+  gap: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
+  color: var(--gray10);
+}
+.formArea .formItem .label::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background: transparent;
+  margin-top: 2px;
+}
+.formArea .formItem .required::after {
+  background: var(--red40);
+}
+.formArea .formItem .form {
+  flex: 1 1 0%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.formArea .formItem .form .flex-1 {
+  flex: 1 1 0%;
+}
+.formArea .formItem .form + .label {
+  margin-left: 16px;
+}
+.formArea.searchBox {
+  background-color: var(--gray80);
+  border-radius: 8px;
+  padding: 16px;
   margin-bottom: 16px;
 }

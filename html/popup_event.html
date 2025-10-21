@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한국도로교통공단</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한국도로교통공단</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/assets/css/style.css" />
+  
 
   <script src="/assets/js/jquery-3.7.0.min.js"></script>
   <script src="/assets/js/jquery-ui.min.js"></script>
@@ -14,6 +16,48 @@
 
   <div class="Popup-contents">
     <h1 class="h1">신호센터 정보</h1>
+
+    <div class="formArea searchBox">
+      <div class="formItem">
+        <label class="label">사용일자</label>
+        <div class="form">
+          <div class="inpBox datePicker">
+                <input type="text" id="datepicker">
+              </div>
+        </div>
+      </div>
+      <div class="formItem">
+        <label class="label required">카드 번호</label>
+        <div class="form">
+          <div class="selectBox">
+            <select id="" name="">
+              <option value="0">선택하세요</option>
+            </select>
+          </div>
+        </div>                
+      </div>
+      <div class="formItem">
+        <label class="label required">작성자</label>
+        <div class="form">
+          <div class="inpBox">
+            <input type="text" placeholder="플레이스홀드" value="재무팀/김중앙 EL" disabled>
+          </div>
+        </div>
+      </div>
+      <div class="formItem">
+        <label class="label required">사용여부</label>
+        <div class="form radCKArea">
+          <div class="checkbox">
+            <input type="checkbox" id="ch01" checked>
+            <label for="ch01">사용</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="ch02">
+            <label for="ch02">미사용</label>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- gridArea -->
     <div class="gridArea">
@@ -100,6 +144,5 @@
     </div>
     <!--//gridArea end -->
   </div>
-  
 </body>
 </html>
