@@ -37,55 +37,55 @@
 /* font-face */
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Thin.woff") format("woff");
   font-weight: 100;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Light.woff") format("woff");
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Medium.woff") format("woff");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-SemiBold.woff") format("woff");
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Bold.woff") format("woff");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Black.woff") format("woff");
   font-weight: 900;
   font-display: swap;
 }
@@ -490,6 +490,7 @@ h5 {
 /*달력*/
 .inpBox.datePicker {
   position: relative;
+  min-width: 130px;
   padding-right: 40px;
 }
 
@@ -510,7 +511,7 @@ h5 {
   display: flex;
   align-items: center;
   border-radius: 8px;
-  border: 1px solid var(--gray70);
+  border: 1px solid var(--line);
   background-color: #FFFFFF;
   width: 100%;
 }
@@ -529,8 +530,8 @@ h5 {
 
 .selectBox select {
   font-size: 14px;
-  line-height: 20px;
-  padding: 5px 28px 5px 12px;
+  line-height: 22px;
+  padding: 6px 28px 6px 12px;
   color: var(--black);
   font-weight: 500;
   border: 0;
@@ -696,6 +697,7 @@ h5 {
   cursor: pointer;
   height: 16px;
   line-height: 16px;
+  font-size: 14px;
 }
 
 .checkbox label::before {
@@ -810,7 +812,7 @@ h5 {
 }
 
 .btn.medium {
-  height: 30px;
+  height: 34px;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -842,7 +844,7 @@ h5 {
 }
 
 .btn:hover {
-  opacity: 0.7;
+  filter: brightness(1.4);
 }
 
 .btn:disabled {
@@ -851,7 +853,7 @@ h5 {
 }
 
 .btn.primary {
-  background-color: var(--gray5);
+  background-color: var(--navy30);
   color: var(--white);
 }
 
@@ -871,9 +873,9 @@ h5 {
   border: 1px solid var(--gray50);
 }
 
-.btn.ic::before {
-  width: 18px;
-  height: 18px;
+.btn .ic::before {
+  width: 16px;
+  height: 16px;
 }
 
 /*아이콘*/
@@ -923,6 +925,10 @@ h5 {
 
 .ic_search::before {
   background-image: url("data:image/svg+xml,%3Csvg width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.143 10.3572C8.74662 10.3572 10.8573 8.2465 10.8573 5.64287C10.8573 3.03925 8.74662 0.928589 6.143 0.928589C3.53937 0.928589 1.42871 3.03925 1.42871 5.64287C1.42871 8.2465 3.53937 10.3572 6.143 10.3572Z' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.5718 12.0714L9.57178 9.07141' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.ic_search_W::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.143 10.3572C8.74662 10.3572 10.8573 8.2465 10.8573 5.64287C10.8573 3.03925 8.74662 0.928589 6.143 0.928589C3.53937 0.928589 1.42871 3.03925 1.42871 5.64287C1.42871 8.2465 3.53937 10.3572 6.143 10.3572Z' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.5718 12.0714L9.57178 9.07141' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 
 .ic_trash::before {
@@ -1154,8 +1160,8 @@ h5 {
 /*table box*/
 .gridArea,
 .dataTable {
-  overflow: hidden;
-  border: 1px solid var(--gray70);
+  overflow: auto;
+  border-top: 1px solid var(--line);
 }
 
 .tableBody {
@@ -1166,23 +1172,19 @@ h5 {
 .tableBody thead th,
 .tableBody tbody td,
 .tableBody tbody th {
-  border: solid var(--gray60);
-  border-width: 1px;
+  border: solid var(--line);
   line-height: 16px;
   font-weight: 500;
 }
 
 .tableBody thead {
   position: sticky;
-  top: 0;
-  height: 30px;
-  left: 0;
-  width: 100%;
   z-index: 1;
+  top: 1px;
 }
 
 .tableBody thead th {
-  border-width: 1px;
+  border-width: 0 1px 1px 1px;
   border-color: var(--gray60);
   padding: 0 8px;
   height: 30px;
@@ -1203,6 +1205,7 @@ h5 {
 .tableBody tbody td {
   position: relative;
   height: 30px;
+  border-width: 1px;
   background-color: #fff;
   font-size: 14px;
   color: var(--gray5);
@@ -1231,7 +1234,7 @@ h5 {
 .ui-datepicker.ui-widget.ui-widget-content {
   border: 0;
   border-radius: 8px;
-  border: 1px solid var(--gray70);
+  border: 1px solid var(--line);
   box-shadow: 0px 0px 12px 0px rgba(32, 41, 54, 0.1);
   padding: 18px;
 }
@@ -1913,23 +1916,22 @@ a.ui-button:active,
   display: flex;
   flex-wrap: wrap;
   row-gap: 8px;
-  column-gap: 40px;
+  column-gap: 24px;
 }
 .formArea .formItem {
-  width: calc(33.333% - 27px);
   display: flex;
   align-items: center;
   gap: 8px;
 }
 .formArea .formItem .label {
-  width: 56px;
-  min-width: 56px;
+  min-width: 80px;
   display: flex;
   gap: 2px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 15px;
   color: var(--gray10);
+  white-space: nowrap;
 }
 .formArea .formItem .label::after {
   content: "";
@@ -1956,8 +1958,29 @@ a.ui-button:active,
   margin-left: 16px;
 }
 .formArea.searchBox {
+  position: relative;
   background-color: var(--gray80);
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
+}
+.formArea.searchBox .searchBtn {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}
+
+.total {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--gray40);
+}
+.total::before {
+  content: "Total :";
+}
+.total span {
+  color: var(--black);
+  font-weight: 600;
 }
