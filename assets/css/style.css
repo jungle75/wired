@@ -784,6 +784,9 @@ h5 {
 /*버튼*/
 .btnArea {
   display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 16px;
 }
 
 .btn {
@@ -793,7 +796,7 @@ h5 {
   gap: 4px;
   background-color: transparent;
   border-radius: 6px;
-  padding: 0 12px;
+  padding: 0 16px;
   white-space: nowrap;
   cursor: pointer;
 }
@@ -1917,6 +1920,7 @@ a.ui-button:active,
   flex-wrap: wrap;
   row-gap: 8px;
   column-gap: 24px;
+  padding: 16px;
 }
 .formArea .formItem {
   display: flex;
@@ -1961,7 +1965,6 @@ a.ui-button:active,
   position: relative;
   background-color: var(--gray80);
   border-radius: 8px;
-  padding: 16px;
   margin-bottom: 16px;
 }
 .formArea.searchBox .searchBtn {
@@ -1983,4 +1986,62 @@ a.ui-button:active,
 .total span {
   color: var(--black);
   font-weight: 600;
+}
+
+.tabMenu {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  height: 44px;
+  padding: 4px;
+  background-color: var(--gray80);
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.tabMenu button {
+  flex: 1;
+  border-radius: 6px;
+  color: var(--gray10);
+  cursor: pointer;
+}
+.tabMenu button.act {
+  background-color: var(--green30);
+}
+.tabMenu button.act span {
+  font-weight: 600;
+  color: white;
+}
+
+.tabContainer .comment {
+  font-size: 14px;
+  color: var(--red30);
+  margin-bottom: 8px;
+}
+.tabContainer .comment::before {
+  content: "※";
+  margin-right: 4px;
+}
+
+.inputForm {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+.inputForm table {
+  width: 100%;
+}
+.inputForm table th, .inputForm table td {
+  font-size: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.inputForm table th {
+  padding: 6px 16px;
+  text-align: left;
+  background-color: var(--gray80);
+}
+.inputForm table td {
+  padding: 6px;
+}
+.inputForm table tr:last-child th, .inputForm table tr:last-child td {
+  border: 0;
 }

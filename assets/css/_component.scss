@@ -511,6 +511,9 @@ h5 {
 /*버튼*/
 .btnArea {
   display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 16px;
 }
 
 .btn {
@@ -520,7 +523,7 @@ h5 {
   gap: 4px;
   background-color: transparent;
   border-radius: 6px;
-  padding: 0 12px;
+  padding: 0 16px;
   white-space: nowrap;
   cursor: pointer;
 }
