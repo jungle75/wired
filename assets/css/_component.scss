@@ -141,9 +141,9 @@ h5 {
 }
 
 .inpBox {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  padding: 4px 6px;
+  padding: 4px 8px;
   border-radius: var(--brS);
   border: 1px solid var(--line);
   background-color: #FFFFFF;
@@ -234,12 +234,11 @@ h5 {
 /* 기본 셀렉트 */
 .selectBox {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 6px;
   border: 1px solid var(--line);
   background-color: #FFFFFF;
-  width: 100%;
 }
 
 .selectBox::after {
@@ -256,8 +255,8 @@ h5 {
 
 .selectBox select {
   font-size: 14px;
-  line-height: 22px;
-  padding: 6px 28px 6px 12px;
+  line-height: 24px;
+  padding: 4px 28px 4px 8px;
   color: var(--black);
   font-weight: 500;
   border: 0;
@@ -517,13 +516,14 @@ h5 {
 }
 
 .btn {
-  display: flex;
+  min-width: 60px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  background-color: transparent;
+  background-color: var(--line);
   border-radius: 6px;
-  padding: 0 16px;
+  padding: 0 12px;
   white-space: nowrap;
   cursor: pointer;
 }
@@ -542,7 +542,7 @@ h5 {
 }
 
 .btn.medium {
-  height: 34px;
+  height: 33px;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -569,12 +569,12 @@ h5 {
 
 /* color */
 .btn {
-  background-color: white;
+  background-color: var(--line);
   color: var(--gray5);
 }
 
 .btn:hover {
-  filter: brightness(1.4);
+  filter: opacity(0.8);
 }
 
 .btn:disabled {
@@ -600,7 +600,7 @@ h5 {
 .btn.line {
   background-color: var(--white);
   color: var(--black);
-  border: 1px solid var(--gray50);
+  border: 1px solid var(--black);
 }
 
 .btn .ic::before {
@@ -1187,4 +1187,40 @@ a.ui-button:active,
 .Sensitive_off {
   border: 2px solid var(--red30);
   background-color: var(--gray50);
+}
+
+// file Uploader
+.filebox .upload-name {
+  display: inline-block;
+  height: 34px;
+  padding: 0 8px;
+  vertical-align: middle;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  width: 78%;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.filebox label {
+  display: inline-block;
+  padding: 0 12px;
+  color: #fff;
+  vertical-align: middle;
+  background-color: var(--line);
+  color: var(--gray5);
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 34px;
+  border-radius: 6px;
+  margin-left: 4px;
+}
+
+.filebox input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
 }

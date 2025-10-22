@@ -59,9 +59,9 @@
           <table>
             <colgroup>
               <col style="width: 10%;">
-              <col style="width: 25%;">
+              <col style="width: 23%;">
               <col style="width: 10%;">
-              <col style="width: 25%;">
+              <col style="width: 22%;">
               <col style="width: 10%;">
               <col style="width: 25%;">
             </colgroup>
@@ -69,21 +69,31 @@
               <tr>
                 <th>네트워크유형</th>
                 <td>                  
-                  <div class="selectBox">
+                  <div class="selectBox" style="width: 200px;">
                     <select id="" name="">
                       <option value="0">선택</option>
                     </select>
                   </div>
                 </td>
                 <th>모뎀IP</th>
-                <td>
-                  <div class="inpBox">
+                <td colspan="3">
+                  <div class="inpBox" style="width: 200px;">
                     <input type="text" placeholder="IP">
                   </div>
                 </td>
+              </tr>
+              <tr>
                 <th>지역센터</th>
-                <td>
-                  <div class="selectBox">
+                <td>                  
+                  <div class="selectBox" style="width: 200px;">
+                    <select id="" name="">
+                      <option value="0">선택</option>
+                    </select>
+                  </div>
+                </td>
+                <th>시군구</th>
+                <td colspan="3">
+                  <div class="selectBox" style="width: 200px;">
                     <select id="" name="">
                       <option value="0">선택</option>
                     </select>
@@ -91,23 +101,46 @@
                 </td>
               </tr>
               <tr>
-                <th>네트워크유형</th>
-                <td>                  
-                  <div class="selectBox">
+                <th>교차로명</th>
+                <td>
+                  <div class="inpBox" style="width: 200px;">
+                    <input type="text" placeholder="교차로명">
+                  </div>
+                </td>
+                <th>교차로번호</th>
+                <td>
+                  <div class="inpBox" style="width: 200px;">
+                    <input type="text" placeholder="교차로번호">
+                  </div>
+                </td>
+                <th>연동번호</th>
+                <td>
+                  <div class="inpBox" style="width: 80px;">
+                    <input type="text" placeholder="연동번호">
+                  </div>
+                  <span>※0:메인제어기 번호</span>
+                </td>
+              </tr>
+              <tr>
+                <th>제어기 유형</th>
+                <td>
+                  <div class="selectBox" style="width: 200px;">
                     <select id="" name="">
                       <option value="0">선택</option>
                     </select>
                   </div>
                 </td>
-                <th>모뎀IP</th>
+                <th>통기화유형</th>
                 <td>
-                  <div class="inpBox">
-                    <input type="text" placeholder="IP">
+                  <div class="selectBox" style="width: 200px;">
+                    <select id="" name="">
+                      <option value="0">선택</option>
+                    </select>
                   </div>
                 </td>
-                <th>지역센터</th>
+                <th>주현시</th>
                 <td>
-                  <div class="selectBox">
+                  <div class="selectBox" style="width: 200px;">
                     <select id="" name="">
                       <option value="0">선택</option>
                     </select>
@@ -115,26 +148,22 @@
                 </td>
               </tr>
               <tr>
-                <th>네트워크유형</th>
-                <td>                  
-                  <div class="selectBox">
-                    <select id="" name="">
-                      <option value="0">선택</option>
-                    </select>
+                <th>그룹번호</th>
+                <td>
+                  <div class="inpBox" style="width: 200px;">
+                    <input type="text" placeholder="그룹번호">
                   </div>
                 </td>
-                <th>모뎀IP</th>
+                <th>X좌표</th>
                 <td>
-                  <div class="inpBox">
-                    <input type="text" placeholder="IP">
+                  <div class="inpBox" style="width: 200px;">
+                    <input type="text" placeholder="X좌표">
                   </div>
                 </td>
-                <th>지역센터</th>
+                <th>Y좌표</th>
                 <td>
-                  <div class="selectBox">
-                    <select id="" name="">
-                      <option value="0">선택</option>
-                    </select>
+                  <div class="inpBox" style="width: 200px;">
+                    <input type="text" placeholder="Y좌표">
                   </div>
                 </td>
               </tr>
@@ -151,9 +180,251 @@
         </div>
       </div>
 
-      <div id="tab02" class="tabContainer">현시 관리</div>
-      <div id="tab03" class="tabContainer">링크 관리</div>
-      <div id="tab04" class="tabContainer">업로드</div>
+      <div id="tab02" class="tabContainer">
+        <p class="comment">하단의 편집할 현시를 선택해 주세요.</p>
+        
+        <div class="total">
+          <div class="selectBox">
+            <select id="" name="">
+              <option value="0">선택</option>
+            </select>
+          </div>
+        </div>
+        <div class="dataTable">
+          <table class="tableBody">
+            <colgroup>
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+            </colgroup>
+            <caption>테이블 내용 요약</caption>
+            <thead>
+              <tr>
+                <th>현시</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+              </tr>
+            </thead>
+            <!--//tableHead end -->
+            <tbody>
+              <tr>
+                <td><span>A링</span></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+              </tr>
+              <tr>
+                <td><span>B링</span></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tab03" class="tabContainer">
+        <p class="comment">하단의 편집할 현시를 선택해 주세요.</p>
+
+        <div class="total">
+          <div class="selectBox">
+            <select id="" name="">
+              <option value="0">선택</option>
+            </select>
+          </div>
+        </div>
+        <div class="dataTable">
+          <table class="tableBody">
+            <colgroup>
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+            </colgroup>
+            <caption>테이블 내용 요약</caption>
+            <thead>
+              <tr>
+                <th>현시</th>
+                <th>구분</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+              </tr>
+            </thead>
+            <!--//tableHead end -->
+            <tbody>
+              <tr>
+                <td rowspan="2"><span>A링</span></td>
+                <td><span>시작</span></td>
+                <td><span>10200060003</span></td>
+                <td><span>10200060003</span></td>
+                <td><span>10200060003</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+              </tr>
+              <tr>
+                <td><span>종료</span></td>
+                <td><span>10200060003</span></td>
+                <td><span>10200060003</span></td>
+                <td><span>10200060003</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+              </tr>
+              <tr>
+                <td rowspan="2"><span>B링</span></td>
+                <td><span>시작</span></td>
+                <td><span>10200060003</span></td>
+                <td><span>10200060003</span></td>
+                <td><span>10200060003</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+              </tr>
+              <tr>
+                <td><span>종료</span></td>
+                <td><span>10200060003</span></td>
+                <td><span>10200060003</span></td>
+                <td><span>10200060003</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+                <td><span>-</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tab04" class="tabContainer">
+
+        <h3 class="h3">파일 업로드</h3>
+        <!-- 폼입력 시작 -->
+        <div class="inputForm">
+          <table>
+            <colgroup>
+              <col style="width: 25%;">
+              <col style="width: 75%;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>지역센터</th>
+                <td>
+                  <div class="selectBox">
+                    <select id="" name="">
+                      <option value="0">선택</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>TB_INT</th>
+                <td>
+                  <div class="filebox">
+                    <input class="upload-name" value="첨부파일" placeholder="첨부파일">
+                    <label for="file">파일찾기</label>
+                    <input type="file" id="file">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>TB_INT_PHASE</th>
+                <td>
+                  <div class="filebox">
+                    <input class="upload-name" value="첨부파일" placeholder="첨부파일">
+                    <label for="file">파일찾기</label>
+                    <input type="file" id="file">
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--//폼입력 끝 -->
+
+        <h3 class="h3" style="margin-top: 24px;">파일 다운로드</h3>
+        <!-- 폼입력 시작 -->
+        <div class="inputForm">
+          <table>
+            <colgroup>
+              <col style="width: 25%;">
+              <col style="width: 75%;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>지역센터</th>
+                <td>
+                  <div class="selectBox" style="width: 200px;">
+                    <select id="" name="">
+                      <option value="0">선택</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>제어기번호</th>
+                <td>
+                  <div class="selectBox" style="width: 200px;">
+                    <select id="" name="">
+                      <option value="0">선택</option>
+                    </select>
+                  </div>
+                  <span>-</span>
+                  <div class="selectBox" style="width: 200px;">
+                    <select id="" name="" style="width: 200px;">
+                      <option value="0">선택</option>
+                    </select>
+                  </div>
+                  <button class="btn medium">다운로드</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--//폼입력 끝 -->
+      </div>
     </section>
     
   </div>
