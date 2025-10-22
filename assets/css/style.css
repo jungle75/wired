@@ -1944,7 +1944,7 @@ a.ui-button:active,
 }
 
 .Popup-contents {
-  padding: 24px;
+  padding: 16px 24px 24px 24px;
 }
 .Popup-contents .h1 {
   font-size: 24px;

@@ -19,9 +19,9 @@
 
       <ul class="nav">
         <li class="ic ic_caution"><span>돌발정보</span></li>
-        <li class="ic ic_sign"><span>신호센터</span></li>
-        <li class="ic ic_log"><span>로그관리</span></li>
-        <li class="ic ic_setting"><span>정보관리</span></li>
+        <li class="ic ic_sign" data-url="popup_signals.html" data-title="신호센터" data-width="900" data-height="700"><span>신호센터</span></li>
+        <li class="ic ic_log" data-url="popup_event.html" data-title="이벤트 이력정보" data-width="1080" data-height="700"><span>로그관리</span></li>
+        <li class="ic ic_setting" data-url="popup_info.html" data-title="정보관리" data-width="1080" data-height="800"><span>정보관리</span></li>
       </ul>
     </header>
     <!--// 상단 Top -->
@@ -652,6 +652,27 @@
     //  '.ic_signals01' 아이콘 클릭 이벤트 핸들러
     $('.signalIcon').on('click', function() {
         $('#modalOpen').toggleClass('open');
+    });
+
+    // 윈도우 팝업
+    function getCenteredOptions(width, height) {
+      const left = (screen.width - width) / 2;
+      const top = (screen.height - height) / 2;
+      return `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes,status=no,toolbar=no,menubar=no`;
+    }
+
+    $('.nav li').on('click', function () {
+      // data-* 속성 값을 숫자로 변환하여 가져옴
+      const url = $(this).data('url');
+      const title = $(this).data('title');
+      const width = $(this).data('width');
+      const height = $(this).data('height');
+
+      const options = getCenteredOptions(width, height);
+
+      if (url && title) {
+        window.open(url, title, options);
+      }
     });
   });
 </script>
