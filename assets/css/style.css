@@ -1953,6 +1953,37 @@ a.ui-button:active,
   margin-bottom: 16px;
 }
 
+.Popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gray70);
+  padding: 16px;
+}
+.Popup-title .h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black);
+}
+.Popup-title .statusInfo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.Popup-title .statusInfo span {
+  font-size: 12px;
+  line-height: 1;
+  color: white;
+  border-radius: 4px;
+  padding: 4px;
+}
+.Popup-title .statusInfo .OFF {
+  background-color: var(--red30);
+}
+.Popup-title .statusInfo .ONLINE {
+  background-color: var(--green30);
+}
+
 .h3 {
   display: flex;
   align-items: center;
