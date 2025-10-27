@@ -14,392 +14,828 @@
 </head>
 <body>
 
+  <!-- 팝업창 사이즈 1080*1000 -->
   <div class="Popup-title">
     <h1 class="h1">[서울시]-성진어린이집</h1>
     <div class="statusInfo">시뮬레이션 <span class="OFF">OFF</span></div>
   </div>
 
   <div class="Popup-contents">
-    <section>
-      <div class="tabMenu">
-        <button class="act"><span>현시구성</span></button>
-        <button class=""><span>TOD 정보</span></button>
-        <button class=""><span>이벤트이력</span></button>
-        <button class=""><span>시그널맵</span></button>
+    <div class="tabMenu">
+      <button class="act"><span>현시구성</span></button>
+      <button class=""><span>TOD 정보</span></button>
+      <button class=""><span>이벤트이력</span></button>
+      <button class=""><span>시그널맵</span></button>
+    </div>
+    
+    <div id="tab01" class="tabContainer">
+    
+      <div class="map"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d101249.80285660844!2d126.92246886549974!3d37.53016918545986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdaum!5e0!3m2!1sko!2skr!4v1758261819280!5m2!1sko!2skr"
+          width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    
+      <h3 class="h3">제어기 정보</h3>
+      <div class="dataTable">
+        <table class="tableBody">
+          <caption>테이블 내용 요약</caption>
+          <thead>
+            <tr>
+              <th>그룹번호</th>
+              <th>제어기<br>번호</th>
+              <th>교차로명</th>
+              <th>수집일시</th>
+              <th>통신여부</th>
+              <th>운영모드</th>
+              <th>시차제<br>모드</th>
+              <th>A링<br>현시값</th>
+              <th>B링<br>현시값</th>
+              <th>소등</th>
+              <th>점멸</th>
+              <th>수동</th>
+              <th>주기<br>카운트</th>
+              <th>주기</th>
+              <th>맵 번호</th>
+              <th>PPC제어</th>
+            </tr>
+          </thead>
+          <!--//tableHead end -->
+          <tbody>
+            <tr>
+              <td><span>5671</span></td>
+              <td><span>3320</span></td>
+              <td><span>성진어린이집</span></td>
+              <td><span>2025-10-02 10:22</span></td>
+              <td><span>이상</span></td>
+              <td><span>비감용 ONLINE</span></td>
+              <td><span>일반</span></td>
+              <td><span>1</span></td>
+              <td><span>1</span></td>
+              <td><span>OFF</span></td>
+              <td><span>OFF</span></td>
+              <td><span>OFF</span></td>
+              <td><span>86</span></td>
+              <td><span>170</span></td>
+              <td><span>0</span></td>
+              <td><span>OFF</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-
-      <div id="tab01" class="tabContainer">
-
-        <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d101249.80285660844!2d126.92246886549974!3d37.53016918545986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdaum!5e0!3m2!1sko!2skr!4v1758261819280!5m2!1sko!2skr" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-        
-        <h3 class="h3">제어기 정보</h3>
-        <div class="dataTable">
-          <table class="tableBody">
-            <caption>테이블 내용 요약</caption>
-            <thead>
-              <tr>
-                <th>그룹번호</th>
-                <th>제어기번호</th>
-                <th>교차로명</th>
-                <th>수집일시</th>
-                <th>통신여부</th>
-                <th>운영모드</th>
-                <th>시차제모드</th>
-                <th>A링 현시값</th>
-                <th>B링 현시값</th>                
-                <th>소등</th>                
-                <th>점멸</th>
-                <th>수동</th>
-                <th>주기 카운트</th>
-                <th>주기</th>
-                <th>맵 번호</th>
-                <th>PPC제어</th>
-              </tr>
-            </thead>
-            <!--//tableHead end -->
-            <tbody>
-              <tr>
-                <td><span>5671</span></td>
-                <td><span>3320</span></td>
-                <td><span>성진어린이집</span></td>
-                <td><span>2025-10-02 10:22</span></td>
-                <td><span>이상</span></td>
-                <td><span>비감용 ONLINE</span></td>
-                <td><span>일반</span></td>
-                <td><span>1</span></td>
-                <td><span>1</span></td>
-                <td><span>OFF</span></td>
-                <td><span>OFF</span></td>
-                <td><span>OFF</span></td>
-                <td><span>86</span></td>
-                <td><span>170</span></td>
-                <td><span>0</span></td>
-                <td><span>OFF</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
+    
+      <div class="toolBar">
         <h3 class="h3">페이즈 정보</h3>
-        <div class="dataTable">
-          <table class="tableBody">
-            <caption>테이블 내용 요약</caption>
-            <thead>
-              <tr>
-                <th>현시</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>A링</td>
-                <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
-              </tr>
-              <tr>
-                <td>주기</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>        
+        <div class="selectBox">
+          <select id="" name="">
+            <option value="0">선택</option>
+          </select>
+        </div>
       </div>
-
-      <div id="tab02" class="tabContainer">
-        <p class="comment">하단의 편집할 현시를 선택해 주세요.</p>
-        
-        <div class="total">
-          <div class="selectBox">
-            <select id="" name="">
-              <option value="0">선택</option>
-            </select>
+    
+      <div class="dataTable">
+        <table class="tableBody">
+          <caption>테이블 내용 요약</caption>
+          <thead>
+            <tr>
+              <th>현시</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>7</th>
+              <th>8</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A링</td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+            </tr>
+            <tr>
+              <td>주기</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>B링</td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+              <td><img src="/assets/img/icon/signals_icon01.svg" alt=""></td>
+            </tr>
+            <tr>
+              <td>주기</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div id="tab02" class="tabContainer">
+      <div class="gridBlock">
+        <div class="block">
+          <h3 class="h3">예약 설정 정보</h3>
+          <div class="dataTable" style="flex: 1;">
+            <table class="tableBody">
+              <caption>테이블 내용 요약</caption>
+              <thead>
+                <tr>
+                  <th rowspan="2">월</th>
+                  <th rowspan="2">일</th>
+                  <th rowspan="2">요일</th>
+                  <th colspan="2">시작</th>
+                  <th colspan="2">종료</th>
+                  <th rowspan="2">예약<br>정보</th>
+                  <th rowspan="2">계획<br>번호</th>
+                </tr>
+                <tr>
+                  <th>시</th>
+                  <th>분</th>
+                  <th>시</th>
+                  <th>분</th>
+                </tr>
+              </thead>
+              <!--//tableHead end -->
+              <tbody>
+                <tr>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                </tr>
+                <tr>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                </tr>
+                <tr>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                </tr>
+                <tr>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                </tr>
+                <tr>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                </tr>
+                <tr>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                </tr>
+                <tr>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                </tr>
+                <tr>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                  <td><span>00</span></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-        <div class="dataTable">
-          <table class="tableBody">
-            <colgroup>
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-            </colgroup>
-            <caption>테이블 내용 요약</caption>
-            <thead>
-              <tr>
-                <th>현시</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-              </tr>
-            </thead>
-            <!--//tableHead end -->
-            <tbody>
-              <tr>
-                <td><span>A링</span></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-              </tr>
-              <tr>
-                <td><span>B링</span></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-                <td><img src="/assets/img/icon/signals_icon01.svg"></td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="block">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d101249.80285660844!2d126.92246886549974!3d37.53016918545986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdaum!5e0!3m2!1sko!2skr!4v1758261819280!5m2!1sko!2skr"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-      </div>
-
-      <div id="tab03" class="tabContainer">
-        <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d101249.80285660844!2d126.92246886549974!3d37.53016918545986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdaum!5e0!3m2!1sko!2skr!4v1758261819280!5m2!1sko!2skr" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-        <!-- 검색영역 시작 -->
-        <section class="formArea searchBox">      
-          <div class="formItem">
-            <label class="label required">지역명</label>
-            <div class="form">
-              <div class="selectBox" style="width: 150px;">
-                <select id="" name="">
-                  <option value="0">선택하세요</option>
-                </select>
-              </div>
+        <div class="block">
+          <h3 class="h3">HOLYDAY PLAN</h3>
+          <div class="dataTable" style="flex: 1;">
+            <table class="tableBody">
+              <colgroup>
+                <col style="width: 30%;">
+                <col style="width: 30%;">
+                <col style="width: 40%;">
+              </colgroup>
+              <caption>테이블 내용 요약</caption>
+              <thead>
+                <tr>
+                  <th>월</th>
+                  <th>일</th>
+                  <th>계획번호</th>
+                </tr>
+              </thead>
+              <!--//tableHead end -->
+              <tbody>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="block">
+          <div class="toolBar">
+            <h3 class="h3">DAY PLAN</h3>
+            <div class="selectBox">
+              <select id="" name="">
+                <option value="0">선택</option>
+              </select>
             </div>
           </div>
-          <div class="formItem">
-            <label class="label required">교차로</label>
-            <div class="form">
-              <div class="selectBox" style="width: 240px;">
-                <select id="" name="">
-                  <option value="0">선택하세요</option>
-                </select>
-              </div>
+    
+          <div class="dataTable" style="flex: 1; margin-bottom: 24px;">
+            <table class="tableBody">
+              <caption>테이블 내용 요약</caption>
+              <thead>
+                <tr>
+                  <th rowspan="2">NO</th>
+                  <th rowspan="2">HOUR</th>
+                  <th rowspan="2">MIN</th>
+                  <th rowspan="2">Cycle</th>
+                  <th rowspan="2">Offset</th>
+                  <th colspan="2">1현시</th>
+                  <th colspan="2">2현시</th>
+                  <th colspan="2">3현시</th>
+                  <th colspan="2">4현시</th>
+                  <th colspan="2">5현시</th>
+                  <th colspan="2">6현시</th>
+                  <th colspan="2">7현시</th>
+                  <th colspan="2">8현시</th>
+                </tr>
+                <tr>
+                  <th>A</th>
+                  <th>B</th>
+                  <th>A</th>
+                  <th>B</th>
+                  <th>A</th>
+                  <th>B</th>
+                  <th>A</th>
+                  <th>B</th>
+                  <th>A</th>
+                  <th>B</th>
+                  <th>A</th>
+                  <th>B</th>
+                  <th>A</th>
+                  <th>B</th>
+                  <th>A</th>
+                  <th>B</th>
+                </tr>
+              </thead>
+              <!--//tableHead end -->
+              <tbody>
+                <tr>
+                  <td><span>1</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>150</span></td>
+                  <td><span>113</span></td>
+                  <td><span>115</span></td>
+                  <td><span>115</span></td>
+                  <td><span>35</span></td>
+                  <td><span>35</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                </tr>
+                <tr>
+                  <td><span>2</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>150</span></td>
+                  <td><span>113</span></td>
+                  <td><span>115</span></td>
+                  <td><span>115</span></td>
+                  <td><span>35</span></td>
+                  <td><span>35</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                </tr>
+                <tr>
+                  <td><span>3</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>150</span></td>
+                  <td><span>113</span></td>
+                  <td><span>115</span></td>
+                  <td><span>115</span></td>
+                  <td><span>35</span></td>
+                  <td><span>35</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                </tr>
+                <tr>
+                  <td><span>4</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>150</span></td>
+                  <td><span>113</span></td>
+                  <td><span>115</span></td>
+                  <td><span>115</span></td>
+                  <td><span>35</span></td>
+                  <td><span>35</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                </tr>
+                <tr>
+                  <td><span>5</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>150</span></td>
+                  <td><span>113</span></td>
+                  <td><span>115</span></td>
+                  <td><span>115</span></td>
+                  <td><span>35</span></td>
+                  <td><span>35</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                </tr>
+                <tr>
+                  <td><span>6</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>150</span></td>
+                  <td><span>113</span></td>
+                  <td><span>115</span></td>
+                  <td><span>115</span></td>
+                  <td><span>35</span></td>
+                  <td><span>35</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                </tr>
+                <tr>
+                  <td><span>7</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>150</span></td>
+                  <td><span>113</span></td>
+                  <td><span>115</span></td>
+                  <td><span>115</span></td>
+                  <td><span>35</span></td>
+                  <td><span>35</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                </tr>
+                <tr>
+                  <td><span>8</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>150</span></td>
+                  <td><span>113</span></td>
+                  <td><span>115</span></td>
+                  <td><span>115</span></td>
+                  <td><span>35</span></td>
+                  <td><span>35</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                </tr>
+                <tr>
+                  <td><span>9</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>150</span></td>
+                  <td><span>113</span></td>
+                  <td><span>115</span></td>
+                  <td><span>115</span></td>
+                  <td><span>35</span></td>
+                  <td><span>35</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                  <td><span>0</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    
+          <h3 class="h3">WEEK PLAN</h3>
+          <div class="dataTable">
+            <table class="tableBody">
+              <caption>테이블 내용 요약</caption>
+              <thead>
+                <tr>
+                  <th>월요일</th>
+                  <th>화요일</th>
+                  <th>수요일</th>
+                  <th>목요일</th>
+                  <th>금요일</th>
+                  <th>토요일</th>
+                  <th>수일요일</th>
+                </tr>
+              </thead>
+              <!--//tableHead end -->
+              <tbody>
+                <tr>
+                  <td><span>3</span></td>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>1</span></td>
+                  <td><span>4</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    <div id="tab03" class="tabContainer">
+      <div class="map"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d101249.80285660844!2d126.92246886549974!3d37.53016918545986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdaum!5e0!3m2!1sko!2skr!4v1758261819280!5m2!1sko!2skr"
+          width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    
+      <h3 class="h3">이벤트 이력정보</h3>
+      <!-- 검색영역 시작 -->
+      <section class="formArea searchBox">
+        <div class="formItem">
+          <label class="label">수집일시</label>
+          <div class="form">
+            <div class="inpBox datePicker">
+              <input type="text" id="datepicker">
+            </div>
+            <div class="selectBox" style="width: 100px;">
+              <select id="" name="">
+                <option value="0">시</option>
+              </select>
+            </div>
+            <div class="selectBox" style="width: 100px;">
+              <select id="" name="">
+                <option value="0">분</option>
+              </select>
+            </div>
+            <span>~</span>
+            <div class="inpBox datePicker">
+              <input type="text" id="datepicker2">
+            </div>
+            <div class="selectBox" style="width: 100px;">
+              <select id="" name="">
+                <option value="0">시</option>
+              </select>
+            </div>
+            <div class="selectBox" style="width: 100px;">
+              <select id="" name="">
+                <option value="0">분</option>
+              </select>
             </div>
           </div>
-        </section>
-        <!-- 검색영역 끝 -->
-
-        <div class="total">
-          <div class="selectBox">
-            <select id="" name="">
-              <option value="0">선택</option>
-            </select>
+        </div>
+        <div class="formItem">
+          <label class="label required">이벤트코드명</label>
+          <div class="form">
+            <div class="selectBox" style="width: 180px;">
+              <select id="" name="">
+                <option value="0">전체</option>
+              </select>
+            </div>
           </div>
         </div>
-        <div class="dataTable">
-          <table class="tableBody">
-            <colgroup>
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-            </colgroup>
-            <caption>테이블 내용 요약</caption>
-            <thead>
-              <tr>
-                <th>현시</th>
-                <th>구분</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-              </tr>
-            </thead>
-            <!--//tableHead end -->
-            <tbody>
-              <tr>
-                <td rowspan="2"><span>A링</span></td>
-                <td><span>시작</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-              </tr>
-              <tr>
-                <td><span>종료</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-              </tr>
-              <tr>
-                <td rowspan="2"><span>B링</span></td>
-                <td><span>시작</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-              </tr>
-              <tr>
-                <td><span>종료</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-              </tr>
-            </tbody>
-          </table>
+        <button class="btn medium primary"><i class="ic ic_search_W"></i>검색</button>
+      </section>
+      <!-- 검색영역 끝 -->
+    
+      <div class="total">
+        <span>0개</span>
+      </div>
+      <div class="dataTable" style="height: 350px;">
+        <table class="tableBody">
+          <caption>테이블 내용 요약</caption>
+          <thead>
+            <tr>
+              <th>수집 일시</th>
+              <th>지역 코드</th>
+              <th>지역 명</th>
+              <th>제어기 번호</th>
+              <th>이벤트 코드</th>
+            </tr>
+          </thead>
+          <!--//tableHead end -->
+          <tbody>
+            <tr>
+              <td colspan="5"><span>이력정보가 없습니다.</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div id="tab04" class="tabContainer">
+    
+      <div class="total">
+        <span>제어기 유형 : 2004년형</span>
+        <span>등화기 유형 : 4색 등화기</span>
+        <div class="selectBox">
+          <select id="" name="">
+            <option value="0">행 번호</option>
+          </select>
         </div>
       </div>
-
-      <div id="tab04" class="tabContainer">
-
-        <div class="total">
-          <span>제어기 유형 : 2004년형</span>
-          <span>등화기 유형 : 4색 등화기</span>
-          <div class="selectBox">
-            <select id="" name="">
-              <option value="0">행 번호</option>
-            </select>
-          </div>
-        </div>
-        <div class="dataTable">
-          <table class="tableBody">
-            <colgroup>
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-              <col style="width: 10%;">
-            </colgroup>
-            <caption>테이블 내용 요약</caption>
-            <thead>
-              <tr>
-                <th>현시</th>
-                <th>구분</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-              </tr>
-            </thead>
-            <!--//tableHead end -->
-            <tbody>
-              <tr>
-                <td rowspan="2"><span>A링</span></td>
-                <td><span>시작</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-              </tr>
-              <tr>
-                <td><span>종료</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-              </tr>
-              <tr>
-                <td rowspan="2"><span>B링</span></td>
-                <td><span>시작</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-              </tr>
-              <tr>
-                <td><span>종료</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>10200060003</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-                <td><span>-</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    
+      <div class="dataTable" style="height: 800px;">
+        <table class="tableBody">
+          <caption>테이블 내용 요약</caption>
+          <thead>
+            <tr>
+              <th>링</th>
+              <th>스텝</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>7</th>
+              <th>8</th>
+              <th>9</th>
+              <th>10</th>
+              <th>11</th>
+              <th>12</th>
+              <th>13</th>
+              <th>14</th>
+              <th>15</th>
+              <th>16</th>
+              <th>MIN</th>
+              <th>MAX</th>
+              <th>EOP</th>
+            </tr>
+          </thead>
+          <!--//tableHead end -->
+          <tbody>
+            <tr>
+              <td rowspan="32"><span>A</span></td>
+              <td class="th"><span>1</span></td>
+              <td class="green"><span>10</span></td>
+              <td class="red"><span>00</span></td>
+              <td class="yellow"><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>40</span></td>
+              <td><span>0</span></td>
+              <td><span>N</span></td>
+            </tr>
+            <tr>
+              <td><span>2</span></td>
+              <td><span>10</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>40</span></td>
+              <td><span>0</span></td>
+              <td><span>N</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </section>
+    </div>
     
   </div>
 

@@ -91,16 +91,23 @@
 .total {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
   margin-bottom: 8px;
   font-size: 13px;
-  color: var(--gray40);
-
-  &::before {
-    content: "Total :";
-  }
 
   span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 16px;
+
+    &::before {
+      content: "Total :";
+      font-size: 13px;
+      color: var(--gray40);
+    }
+
+    font-size: 14px;
     color: var(--black);
     font-weight: 600;
   }
@@ -108,10 +115,16 @@
   &:has(.selectBox) {
     justify-content: flex-end;
 
-    &::before {
-      content: "앱번호 :";
+    span::before {
+      display: none;
     }
   }
+}
+
+.toolBar {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0 8px;
 }
 
 .tabMenu {
@@ -187,6 +200,45 @@
       td {
         border: 0;
       }
+    }
+  }
+}
+
+.gridBlock {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: 300px 530px;
+  gap: 8px;
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+
+    .dataTable {
+      border: 0;
+
+      thead {
+        position: relative !important;
+      }
+
+      th,
+      td {
+        font-size: 12px !important;
+        border: 1px solid var(--line) !important;
+        height: 30px;
+        padding: 0 4px !important;
+
+        span {
+          font-size: 12px !important;
+        }
+      }
+    }
+
+    .toolBar {
+      margin: 0 0 8px 0;
     }
   }
 }

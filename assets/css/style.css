@@ -1192,8 +1192,7 @@ h5 {
 .tableBody thead th {
   border-width: 0 1px 1px 1px;
   border-color: var(--gray60);
-  padding: 0 8px;
-  height: 30px;
+  padding: 8px;
   background-color: var(--gray80);
   font-size: 14px;
   color: var(--gray5);
@@ -1202,10 +1201,6 @@ h5 {
 
 .tableBody tbody {
   background-color: #fff;
-}
-
-.tableBody tbody tr:hover td {
-  background-color: var(--blue90);
 }
 
 .tableBody tbody td {
@@ -1224,7 +1219,25 @@ h5 {
   display: block;
   font-size: 14px;
   font-weight: 400;
-  color: var(--gray5);
+}
+
+.tableBody tbody td.th {
+  background-color: var(--gray60);
+}
+
+.tableBody tbody td.green {
+  color: white;
+  background-color: var(--green30);
+}
+
+.tableBody tbody td.red {
+  color: white;
+  background-color: var(--red30);
+}
+
+.tableBody tbody td.yellow {
+  color: black;
+  background-color: var(--yellow30);
 }
 
 .gridArea .tableBody tbody td {
@@ -1740,7 +1753,7 @@ a.ui-button:active,
   justify-content: center;
   align-items: center;
   border: 1px solid var(--gray60);
-  background-color: white;
+  background-color: var(--gray60);
 }
 .container .btnFold::before {
   content: "";
@@ -1848,7 +1861,7 @@ a.ui-button:active,
 }
 .container .contents .infoArea .gridArea {
   width: 100%;
-  height: 202px;
+  height: 204px;
   overflow: auto;
 }
 .container .contents .infoArea .btnFold {
@@ -1961,13 +1974,14 @@ a.ui-button:active,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--gray70);
-  padding: 16px;
+  padding: 0 16px;
+  border-bottom: 3px solid var(--navy30);
+  background-color: var(--gray80);
 }
 .Popup-title .h1 {
   font-size: 24px;
-  font-weight: 700;
-  color: var(--black);
+  font-weight: 600;
+  color: var(--navy30);
 }
 .Popup-title .statusInfo {
   display: flex;
@@ -2066,23 +2080,35 @@ a.ui-button:active,
 .total {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
   margin-bottom: 8px;
   font-size: 13px;
-  color: var(--gray40);
-}
-.total::before {
-  content: "Total :";
 }
 .total span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 16px;
+  font-size: 14px;
   color: var(--black);
   font-weight: 600;
+}
+.total span::before {
+  content: "Total :";
+  font-size: 13px;
+  color: var(--gray40);
 }
 .total:has(.selectBox) {
   justify-content: flex-end;
 }
-.total:has(.selectBox)::before {
-  content: "앱번호 :";
+.total:has(.selectBox) span::before {
+  display: none;
+}
+
+.toolBar {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0 8px;
 }
 
 .tabMenu {
@@ -2146,4 +2172,38 @@ a.ui-button:active,
 .inputForm table tr:last-child th,
 .inputForm table tr:last-child td {
   border: 0;
+}
+
+.gridBlock {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: 300px 530px;
+  gap: 8px;
+}
+.gridBlock .block {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+.gridBlock .block .dataTable {
+  border: 0;
+}
+.gridBlock .block .dataTable thead {
+  position: relative !important;
+}
+.gridBlock .block .dataTable th,
+.gridBlock .block .dataTable td {
+  font-size: 12px !important;
+  border: 1px solid var(--line) !important;
+  height: 30px;
+  padding: 0 4px !important;
+}
+.gridBlock .block .dataTable th span,
+.gridBlock .block .dataTable td span {
+  font-size: 12px !important;
+}
+.gridBlock .block .toolBar {
+  margin: 0 0 8px 0;
 }

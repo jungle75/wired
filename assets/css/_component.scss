@@ -917,8 +917,7 @@ h5 {
 .tableBody thead th {
   border-width: 0 1px 1px 1px;
   border-color: var(--gray60);
-  padding: 0 8px;
-  height: 30px;
+  padding: 8px;
   background-color: var(--gray80);
   font-size: 14px;
   color: var(--gray5);
@@ -927,10 +926,6 @@ h5 {
 
 .tableBody tbody {
   background-color: #fff;
-}
-
-.tableBody tbody tr:hover td {
-  background-color: var(--blue90);
 }
 
 .tableBody tbody td {
@@ -949,7 +944,25 @@ h5 {
   display: block;
   font-size: 14px;
   font-weight: 400;
-  color: var(--gray5);
+}
+
+.tableBody tbody td.th {
+  background-color: var(--gray60);
+}
+
+.tableBody tbody td.green {
+  color: white;
+  background-color: var(--green30);
+}
+
+.tableBody tbody td.red {
+  color: white;
+  background-color: var(--red30);
+}
+
+.tableBody tbody td.yellow {
+  color: black;
+  background-color: var(--yellow30);
 }
 
 .gridArea .tableBody tbody td {
