@@ -1952,6 +1952,10 @@ a.ui-button:active,
   color: var(--black);
   margin-bottom: 16px;
 }
+.Popup-contents .map {
+  display: flex;
+  gap: 16px;
+}
 
 .Popup-title {
   display: flex;

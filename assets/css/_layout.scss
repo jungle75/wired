@@ -552,6 +552,10 @@
     color: var(--black);
     margin-bottom: 16px;
   }
+  .map {
+    display: flex;
+    gap: 16px;
+  }
 }
 
 .Popup-title {
